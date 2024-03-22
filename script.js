@@ -11,31 +11,13 @@ let dataValue = fetch("https://rickandmortyapi.com/api/character")
       let displayMenu = "";
 
       dataUsers.results.forEach(function (item) {
-        if (item.status === "Alive") {
-          displayMenu += `
-        <button onclick="nazmi(${item.id})" class="border-green">
+        displayMenu += `
+        <button onclick="nazmi(${item.id})" class="border-${item.status}">
         <img src="${item.image}" />
         <p class="name">${item.name}</p>
         <p class="status">${item.status}</p>
       </button>
         `;
-        } else if (item.status === "Dead") {
-          displayMenu += `
-        <button onclick="nazmi(${item.id})" class="border-red">
-        <img src="${item.image}" />
-        <p class="name">${item.name}</p>
-        <p class="status">${item.status}</p>
-      </button>
-        `;
-        } else {
-          displayMenu += `
-          <button onclick="nazmi(${item.id})" class="border-grey">
-          <img src="${item.image}" />
-          <p class="name">${item.name}</p>
-          <p class="status">${item.status}</p>
-        </button>
-          `;
-        }
 
         mestoVstavki.innerHTML = displayMenu;
       });
@@ -49,3 +31,4 @@ let dataValue = fetch("https://rickandmortyapi.com/api/character")
 function nazmi(id) {
   alert("ID персонажа: " + id);
 }
+
