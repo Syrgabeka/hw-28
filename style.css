@@ -11,17 +11,17 @@
   flex-wrap: wrap;
   gap: 30px;
 }
-.border-green {
+.border-Alive {
   box-shadow: 0 0 5px 5px rgb(0, 255, 94);
   background-color: rgb(0, 255, 94);
   border: none;
 }
-.border-red {
+.border-Dead {
   box-shadow: 0 0 5px 5px rgb(250, 66, 15);
   background-color: rgb(250, 66, 15, 0.8);
   border: none;
 }
-.border-grey {
+.border-unknown {
   box-shadow: 0 0 5px 5px rgb(93, 93, 93);
   background-color: rgb(93, 93, 93, 0.5);
   border: none;
